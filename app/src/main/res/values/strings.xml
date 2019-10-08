@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">notesApp</string>
+    <item name="test_obj1" type="id"/>
+</resources>
