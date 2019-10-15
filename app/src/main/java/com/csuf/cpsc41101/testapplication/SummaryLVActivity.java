@@ -1,4 +1,4 @@
-package com.example.notesapp;
+package com.csuf.cpsc41101.testapplication;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.notesapp;
+package com.csuf.cpsc41101.testapplication;
 
 import java.util.ArrayList;
 
@@ -15,6 +15,10 @@ public class PersonDB {
 
     public ArrayList<Person> getPersonList(){
         return mPersonList;
+    }
+
+    public void getPersonList(ArrayList<Person>personList){
+        mPersonList = personList;
     }
 
     public void setPersonList(ArrayList<Person> personList) {

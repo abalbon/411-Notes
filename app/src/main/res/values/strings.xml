@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">notesApp</string>
-    <item name="test_obj1" type="id"/>
+    <string name="app_name">TestApplication</string>
+    <item name="test_obj1" type="id"></item>
+    <string name="title_activity_peson_detail">PesonDetailActivity</string>
 </resources>

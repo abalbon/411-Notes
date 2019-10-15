@@ -1,4 +1,4 @@
-package com.example.notesapp;
+package com.csuf.cpsc41101.testapplication;
 
 public class Vehicle {
     protected String mVIN;
