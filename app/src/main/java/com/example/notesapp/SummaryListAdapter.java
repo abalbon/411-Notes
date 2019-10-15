@@ -8,27 +8,33 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class SummaryListAdapter extends BaseAdapter {
+
     @Override
     public int getCount() {
         return PersonDB.getInstance().getPersonList().size();
     }
+
     @Override
-    public Object getItem(int position) {
-        return PersonDB.getInstace().getPersonList().get(position);
+    public Object getItem(int i) {
+        return PersonDB.getInstance().getPersonList().get(i);
     }
 
     @Override
-    public long getItemId(int position) {
-        return position;
+    public long getItemId(int i) {
+        return i;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        View row_view;
 
-        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        View row_view = inflater.inflate(R.layout.person_row, viewGroup, false);
+        if(view == null) {
+            LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
+            row_view = inflater.inflate(R.layout.person_row, viewGroup, false);
+        } else row_view = view;
 
-        Person p = PersonDB.getInstance().getPersonList().get(position);
+        //
+        Person p = PersonDB.getInstance().getPersonList().get(i);
         //
         ((TextView) row_view.findViewById(R.id.first_name)).setText(p.getFirstName());
         ((TextView) row_view.findViewById(R.id.last_name)).setText(p.getLastName());

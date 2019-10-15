@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         protected void createPersonObjects() {
             Person person = new Person("Albert,", "Balbon");
-            ArrayList<Vehicle> vehicles = new ArrayList<~>();
+            ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
             vehicles.add(new Vehicle("1234567890", "Abarth", "500"));
             vehicles.add(new Vehicle("0987654321", "Bmw", "325e"));
             person.setVehicles(vehicles);
-            ArrayList<Person> persons = new ArrayList<~>();
+            ArrayList<Person> persons = new ArrayList<Vehicle>();
             persons.add(person);
 
             PersonDB.getInstance().setPersonList(persons);
