@@ -17,6 +17,22 @@ public class PersonDB {
         return mPersonList;
     }
 
+    protected void createPersonObjects() {
+        Person person = new Person("James", "Shen");
+        ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
+        vehicles.add(new Vehicle("J7483438738", "Honda", "Accord"));
+        vehicles.add(new Vehicle("A47575777", "Ford", "Escort"));
+        person.setVehicles(vehicles);
+        mPersonList = new ArrayList<Person>();
+        mPersonList.add(person);
+
+        person = new Person("John", "Chang");
+        vehicles = new ArrayList<Vehicle>();
+        vehicles.add(new Vehicle("J37373737", "Toyota", "Camry"));
+        person.setVehicles(vehicles);
+        mPersonList.add(person);
+    }
+
     public void getPersonList(ArrayList<Person>personList){
         mPersonList = personList;
     }

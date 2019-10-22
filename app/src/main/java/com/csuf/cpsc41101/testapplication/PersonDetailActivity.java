@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -14,9 +15,13 @@ public class PersonDetailActivity extends AppCompatActivity {
     protected Menu detailMenu;
     protected int personIndx;
     protected Person pObj;
+    protected final String TAG = "Detail Screen";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate() called");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person_detail);
 
@@ -53,6 +58,8 @@ public class PersonDetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d(TAG, "onCreateOptionsMenu() called");
+
         // Custom Menu inflation
         getMenuInflater().inflate(R.menu.detail_screen_menu, menu);
         menu.findItem(R.id.action_edit).setVisible(true);
@@ -62,9 +69,41 @@ public class PersonDetailActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    protected void onStart() {
+        Log.d(TAG, "onStart() called");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.d(TAG, "onResume() called");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.d(TAG, "onPause() called");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(TAG, "onStop() called");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "onDestroy() called");
+        super.onDestroy();
+    }
+
     // On Edit press, it will let the first and last name editable
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Log.d(TAG, "onOptionsItemSelected() called");
+
         if (item.getItemId() == R.id.action_edit) {
             EditText editView = findViewById(R.id.p_first_name_id);
             editView.setEnabled(true);

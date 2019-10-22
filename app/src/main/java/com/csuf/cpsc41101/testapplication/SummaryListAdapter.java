@@ -59,3 +59,7 @@ public class SummaryListAdapter extends BaseAdapter {
         return row_view;
     }
 }
+
+/*
+adaptedView has a notidydatasetchanged call back which will notify the view to change the display
+ */

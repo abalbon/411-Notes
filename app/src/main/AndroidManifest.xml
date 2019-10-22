@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PersonDetailActivity"
-            android:parentActivityName=".SummaryLVActivity">
+            android:parentActivityName=".SummaryLVActivity"
+            android:launchMode="singleTop">
+        <!--This will not call on create, instead it will just do onStart and onResume
+                Any data changes will not be displayed-->
         </activity>
         <activity android:name=".DynamicContent0926Activity">
             <intent-filter>
